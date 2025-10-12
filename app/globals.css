@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Qurova Semi Bold';
+  src: url('/fonts/Qurova-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+.head {
+  font-family: 'Qurova Semi Bold', sans-serif;
+  font-weight: 600;
+}
+
+/* Color System / Themes */
+/* Light Theme */
+.theme-light {
+  --theme-back: #F2E9D9;
+  --theme-fore: #046E00;
+  --theme-back-sec: #021F00;
+  --theme-fore-75: #046E00BF;
+  --theme-fore-50: #046E0080;
+}
+
+/* Dark Theme */
+.theme-dark {
+  --theme-back: #011100;
+  --theme-fore: #F2E9D9;
+  --theme-back-sec: #F6F2EA;
+  --theme-fore-75: #F2E9D9BF;
+  --theme-fore-50: #F2E9D980;
+}
+
+/* Color Theme */
+.theme-color {
+  --theme-back: #046E00;
+  --theme-fore: #F2E9D9;
+  --theme-back-sec: #117C0D;
+  --theme-fore-75: #046E00BF;
+  --theme-fore-50: #046E0080;
+}
+
+/* Apply theme colors */
+.bg-theme-back {
+  background-color: var(--theme-back);
+}
+
+.bg-theme-back-sec {
+  background-color: var(--theme-back-sec);
+}
+
+.text-theme-fore {
+  color: var(--theme-fore);
+}
+
+.text-theme-fore-75 {
+  color: var(--theme-fore-75);
+}
+
+.text-theme-fore-50 {
+  color: var(--theme-fore-50);
+}
