@@ -9,7 +9,7 @@ export default function UMichPage() {
         {/* OFM Logo + UMich Logo */}
         <div className="flex flex-row w-full">
             <Logo position="left" maxSize={150} />
-            <img src="/unis/umich-white.svg" alt="University of Michigan" className="max-w-[50px] h-auto" />
+            <img src="/unis/umich.svg" alt="University of Michigan" className="max-w-[50px] h-auto" />
         </div>
         
         {/* Cards */}

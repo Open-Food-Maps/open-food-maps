@@ -20,7 +20,7 @@
 .theme-light {
   --theme-back: #F2E9D9;
   --theme-fore: #046E00;
-  --theme-back-sec: #021F00;
+  --theme-back-sec: #F6F2EA;
   --theme-fore-75: #046E00BF;
   --theme-fore-50: #046E0080;
 }
@@ -62,6 +62,11 @@
 
 .text-theme-fore-50 {
   color: var(--theme-fore-50);
+}
+
+/* Logo SVG color */
+.logo svg {
+  fill: var(--theme-fore);
 }
 
 /* Custom breakpoint for 375px+ */
