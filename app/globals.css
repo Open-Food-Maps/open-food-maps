@@ -63,3 +63,28 @@
 .text-theme-fore-50 {
   color: var(--theme-fore-50);
 }
+
+/* Custom breakpoint for 375px+ */
+@media (min-width: 376px) {
+  .mobile {
+    flex-direction: row;
+  }
+}
+
+/* For screens smaller than 376px */
+@media (max-width: 375px) {
+  .mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mobile-gap {
+    gap: 0.5rem; /* gap-2 */
+  }
+  .mobile-no-mt {
+    margin-top: 0;
+  }
+  .mobile-line-clamp {
+    -webkit-line-clamp: 1 !important;
+    line-clamp: 1 !important;
+  }
+}

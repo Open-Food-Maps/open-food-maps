@@ -16,7 +16,7 @@ export default function UMichPage() {
         <div className="flex flex-col w-full items-center gap-4">
         
             {/* Test Card */}
-            <div className="w-full max-w-md">
+            <div className="w-full max-w-lg">
                 <Card
                     title="South Quad Dining Hall"
                     body="A popular dining hall with diverse food options including international cuisine, vegetarian choices, and traditional American meals."
