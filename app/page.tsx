@@ -8,8 +8,8 @@ export default function Home() {
       <div className="flex flex-col w-full items-center gap-2">
         <h1 className="self-start head text-2xl">select a campus:</h1>
         <div className="grid grid-cols-2 gap-6 w-full">
-          <UniversityTile src="/unis/umich-white.svg" alt="University of Michigan" />
-          <UniversityTile src="/unis/mcgill.svg" alt="McGill University" />
+          <UniversityTile src="/unis/umich-white.svg" alt="University of Michigan" href="/umich" />
+          <UniversityTile src="/unis/mcgill.svg" alt="McGill University" href="/mcgill" />
         </div>
       </div>
     </main>

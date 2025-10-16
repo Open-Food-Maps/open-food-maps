@@ -39,8 +39,8 @@
   --theme-back: #046E00;
   --theme-fore: #F2E9D9;
   --theme-back-sec: #117C0D;
-  --theme-fore-75: #046E00BF;
-  --theme-fore-50: #046E0080;
+  --theme-fore-75: #F2E9D9BF;
+  --theme-fore-50: #F2E9D980;
 }
 
 /* Apply theme colors */
