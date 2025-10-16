@@ -3,7 +3,7 @@ import UniversityTile from './components/university-tile'
 
 export default function Home() {
   return (
-    <main className="theme-color bg-theme-back text-theme-fore flex min-h-screen flex-col items-center p-8 gap-8">
+    <main className="bg-theme-back text-theme-fore flex min-h-screen flex-col items-center p-8 gap-8">
       <Logo position="center" maxSize={150} />
       <div className="flex flex-col w-full items-center gap-2">
         <h1 className="self-start head text-2xl">select a campus:</h1>

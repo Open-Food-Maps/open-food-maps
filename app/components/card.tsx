@@ -22,7 +22,7 @@ export default function Card({
   className = ""
 }: CardProps) {
   return (
-    <div className={`flex flex-row theme-color bg-theme-back-sec rounded-3xl p-4 gap-4 ${className}`}>
+    <div className={`flex flex-row bg-theme-back-sec rounded-3xl p-4 gap-4 ${className}`}>
     
       {/* Photo or Map placeholder */}
        <div className="w-24 h-40 bg-theme-back rounded-xl flex items-center justify-center flex-shrink-0">

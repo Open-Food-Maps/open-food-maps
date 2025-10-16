@@ -4,7 +4,7 @@ import Card from '../components/card'
 
 export default function UMichPage() {
   return (
-    <main className="theme-color bg-theme-back text-theme-fore flex min-h-screen flex-col items-center p-8 gap-8">
+    <main className="bg-theme-back text-theme-fore flex min-h-screen flex-col items-center p-8 gap-8">
 
         {/* OFM Logo + UMich Logo */}
         <div className="flex flex-row w-full">

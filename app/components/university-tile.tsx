@@ -9,7 +9,7 @@ interface ImageBoxProps {
 
 export default function UniversityTile({ src, alt, href, className = "" }: ImageBoxProps) {
   const content = (
-    <div className={`theme-color bg-theme-back-sec aspect-square w-full p-4 rounded-2xl flex items-center justify-center hover:bg-theme-back-sec/80 transition-colors cursor-pointer ${className}`}>
+    <div className={`bg-theme-back-sec aspect-square w-full p-4 rounded-2xl flex items-center justify-center hover:bg-theme-back-sec/80 transition-colors cursor-pointer ${className}`}>
       <img
         src={src}
         alt={alt}
