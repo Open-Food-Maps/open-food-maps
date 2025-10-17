@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -13,28 +12,26 @@ model University {
   id        String     @id @default(uuid())
   name      String
   slug      String     @unique
-  foodDeals FoodDeal[]
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
+  foodDeals FoodDeal[]
 
   @@map("universities")
 }
 
 model FoodDeal {
-  id          String     @id @default(uuid())
-  title       String
-  place       String
-  timeStart   DateTime
-  timeEnd     DateTime
-  priceStart  Decimal?   @db.Decimal(10, 2)
-  priceEnd    Decimal?   @db.Decimal(10, 2)
-  description String?
-  
-  reports     Int        @default(0)
+  id           String     @id @default(uuid())
+  title        String
+  place        String
+  timeStart    DateTime
+  timeEnd      DateTime
+  priceStart   Decimal?   @db.Decimal(10, 2)
+  priceEnd     Decimal?   @db.Decimal(10, 2)
+  description  String?
+  reports      Int        @default(0)
   universityId String
-  university  University @relation(fields: [universityId], references: [id], onDelete: Cascade)
-  createdAt   DateTime   @default(now())
-
+  createdAt    DateTime   @default(now())
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
 
   @@map("food_deals")
 }

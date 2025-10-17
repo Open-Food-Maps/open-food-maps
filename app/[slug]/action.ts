@@ -1,9 +1,15 @@
 'use server'
 
-import prisma from '@/lib/prisma';
+import { prisma } from '@/lib/prisma';
 
 export async function getUniversityBySlug(slug: string) {
   try {
+    // Check if prisma is properly initialized
+    if (!prisma || !prisma.university) {
+      console.error('Prisma client not properly initialized')
+      return null
+    }
+
     const university = await prisma.university.findUnique({
       where: {
         slug: slug

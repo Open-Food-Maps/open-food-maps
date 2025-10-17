@@ -11,13 +11,31 @@ interface UniversityPageProps {
 }
 
 export default async function UniversityPage({ params }: UniversityPageProps) {
-  const { slug } = params
+  const { slug } = await params
 
   // Fetch university and its food deals using server action
   const university = await getUniversityBySlug(slug)
 
   if (!university) {
-    notFound()
+    // For now, show a placeholder page instead of 404
+    // This allows the dynamic route to work even without database
+    return (
+      <main className="bg-theme-back text-theme-fore flex min-h-screen flex-col items-center p-8 gap-8">
+        {/* OFM Logo */}
+        <div className="flex flex-row w-full">
+          <Logo position="left" maxSize={150} />
+        </div>
+        
+        {/* Placeholder Content */}
+        <div className="flex flex-col w-full items-center gap-4">
+          <h1 className="head text-3xl">University: {slug}</h1>
+          <p className="text-center text-lg">Database not connected. Please set up your database to view food deals.</p>
+          <div className="text-center text-gray-500">
+            <p>No food deals available - database connection required.</p>
+          </div>
+        </div>
+      </main>
+    )
   }
 
   return (
@@ -37,7 +55,7 @@ export default async function UniversityPage({ params }: UniversityPageProps) {
       {/* Food Deals Cards */}
       <div className="flex flex-col w-full items-center gap-4">
         {university.foodDeals.length > 0 ? (
-          university.foodDeals.map((deal) => (
+          university.foodDeals.map((deal: any) => (
             <FoodDealCard key={deal.id} deal={deal} />
           ))
         ) : (
